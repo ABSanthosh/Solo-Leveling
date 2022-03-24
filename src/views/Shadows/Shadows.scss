@@ -1,0 +1,32 @@
+@import "../../styles/mixins";
+
+.ShadowsWrapper {
+  @include box();
+  background-color: #180f31;
+
+  &__Nav {
+    width: 100%;
+    height: 73px;
+    @include make-flex($just: flex-start, $dir: row);
+    padding: 0 30px;
+    gap: 15px;
+
+    a {
+      text-decoration: none;
+      font-family: "Montserrat", sans-serif;
+      font-size: 18px;
+      color: white;
+
+      @include make-flex($dir: row);
+      gap: 10px;
+      padding: 3px 10px;
+      border-radius: 6px;
+      background-color: transparent;
+      border: 1px solid transparent;
+      &:hover {
+        border: 1px solid #e0e0e0;
+      }
+  
+    }
+  }
+}

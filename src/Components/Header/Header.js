@@ -9,7 +9,7 @@ function Header(props) {
   const [rankOpen, setRankOpen] = useState(false);
 
   return (
-    <div className="HeaderWrapper">
+    <nav className="HeaderWrapper">
       <a href="/shadows" className="HeaderWrapper__Item">
         <p>Shadows</p>
       </a>
@@ -47,7 +47,7 @@ function Header(props) {
           </div>
         )}
       </button>
-    </div>
+    </nav>
   );
 }
 
