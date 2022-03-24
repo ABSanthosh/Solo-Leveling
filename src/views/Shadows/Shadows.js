@@ -5,7 +5,6 @@ import Tank from "../../Assets/Shadows/tank.png";
 import Iron from "../../Assets/Shadows/Iron.png";
 
 function Shadows(props) {
-  const shadowsList = ["Igris", "Tank", "Iron", "Tusk"];
   const [activeShadow, setActiveShadow] = React.useState(2);
 
   const data = [

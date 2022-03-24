@@ -1,12 +1,11 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
+import React from "react";
 import "./Header.scss";
 
 // import svg
-import { ReactComponent as DropDown } from "../../Assets/dropDown.svg";
+// import { ReactComponent as DropDown } from "../../Assets/dropDown.svg";
 
 function Header(props) {
-  const [rankOpen, setRankOpen] = useState(false);
+  // const [rankOpen, setRankOpen] = useState(false);
 
   return (
     <nav className="HeaderWrapper">
