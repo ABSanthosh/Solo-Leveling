@@ -1,8 +1,9 @@
 @import "../../styles/mixins";
 
 .ShadowsWrapper {
-  @include box();
-  background-color: #180f31;
+  min-height: 100%;
+  @include box($height: auto);
+  background-color: #754b8e;
 
   &__Nav {
     width: 100%;
@@ -26,7 +27,103 @@
       &:hover {
         border: 1px solid #e0e0e0;
       }
-  
     }
   }
+
+  &__Content {
+    min-height: calc(100% - 73px);
+    @include box();
+    @include make-flex();
+
+    &--image {
+      height: 90vh;
+      margin: auto;
+    }
+    &__Title {
+      font-family: "Smooch", cursive;
+      width: 100%;
+      text-align: center;
+      font-style: italic;
+      font-size: 90px;
+      color: rgb(160, 160, 160);
+      @include respondAt(1238px) {
+        width: 200px;
+      }
+    }
+    &--Bottom {
+      display: grid;
+      grid-template-columns: 0.7fr 1fr 0.7fr;
+
+      @include respondAt(1238px) {
+        grid-template-columns: none;
+        grid-template-rows: auto 1fr auto;
+      }
+
+      //   align center
+    }
+
+    &__Left,
+    &__Right {
+      height: auto;
+      width: 100%;
+      padding: 30px;
+
+      &--Box {
+        @include box($height: auto);
+        @include make-flex($align: flex-start);
+        padding: 20px;
+
+        color: white;
+        font-family: "Manrope", sans-serif;
+        gap: 10px;
+        &__Title {
+          font-size: 45px;
+        }
+
+        &__Desc {
+          font-size: 20px;
+          @include make-flex();
+          gap: 10px;
+        }
+
+        &__Ability {
+          width: 100%;
+          padding: 5px 10px;
+          border: 1px solid #e0e0e0;
+
+          position: relative;
+          display: inline-block;
+          padding: 0.8em 4em;
+          border: 2px solid rgb(230, 230, 230);
+          color: rgb(255, 255, 255);
+          font-size: 18px;
+          font-family: "Open Sans", sans-serif;
+          font-weight: 400;
+          text-align: center;
+          text-decoration: none;
+          transition: 0.3s;
+        }
+      }
+    }
+
+    &__Left {
+      @include make-flex($align: flex-end, $just: flex-start);
+
+      @include respondAt(1238px) {
+        @include make-flex($dir: row);
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+    }
+
+    &__Right {
+      @include make-flex($align: flex-start, $just: flex-start);
+    }
+  }
+}
+
+.active {
+  font-size: 135px;
+  color: white;
+  width: 290px;
 }

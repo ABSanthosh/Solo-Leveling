@@ -1,9 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Smooch&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+// load local font Cyberpunk.ttf
+@font-face {
+  font-family: "Cyberpunk";
+  src: url(./Assets/Fonts/Cyberpunk.ttf) format("truetype");
 }
 
 #root,

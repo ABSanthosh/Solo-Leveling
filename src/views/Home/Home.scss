@@ -19,10 +19,15 @@
 
     @include respondAt(900px) {
       @include make-flex();
+      padding: 0;
     }
 
     &--logo {
       width: 40%;
+
+      @include respondAt(900px) {
+        width: 70%;
+      }
     }
 
     &--description {
@@ -35,6 +40,13 @@
       background: rgba(255, 255, 255, 0.226);
       backdrop-filter: blur(50px);
       border-radius: 10px;
+      font-size: 17px;
+      overflow: hidden;
+      font-family: "Manrope", sans-serif;
+
+      @include respondAt(900px) {
+        width: 70%;
+      }
     }
   }
 }

@@ -13,7 +13,7 @@ function Header(props) {
       <a href="/shadows" className="HeaderWrapper__Item">
         <p>Shadows</p>
       </a>
-      <button
+      {/* <button
         onMouseEnter={() => setRankOpen(true)}
         onMouseLeave={() => setRankOpen(false)}
         className="HeaderWrapper__Item"
@@ -46,7 +46,7 @@ function Header(props) {
             </div>
           </div>
         )}
-      </button>
+      </button> */}
     </nav>
   );
 }
